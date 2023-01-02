@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 60vw;
+  margin-top: 1rem;
+}
+
+body {
+  background-color: rgb(219, 233, 207);
+}
+fieldset {
+  padding: 1.1rem;
+  border-radius: 15px;
+}
+h1 {
+  margin-top: 2rem;
+}
+
+.vyp {
+  margin: 5px;
+  padding: 5px;
+}

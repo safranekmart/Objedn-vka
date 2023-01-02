@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objednavkovy formular</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Objednávka</h1>
+      </header>
+      <main>
+        <form id="order">
+          <!--Znacka-->
+          <fieldset>
+            <legend>Značka</legend>
+            <label for="car">Vyberte značku auta</label><br />
+            <select class="input" name="car" id="car">
+              <option value="1500000">Mercedes 1 500 000 Kč</option>
+              <option value="1200000">Volvo 1 200 000 Kč</option>
+              <option value="1350000">Audi 1 350 000 Kč</option>
+              <option value="1400000">BMW 1 400 000 Kč</option>
+            </select>
+          </fieldset>
+          <!--Barva-->
+          <br />
+          <fieldset>
+            <legend>Barva</legend>
+            <input
+              class="input"
+              type="radio"
+              id="basic"
+              name="color"
+              value="basic"
+              checked
+            />
+            <label for="basic">Základní barva(bez příplatku)</label><br />
+            <input
+              class="input"
+              type="radio"
+              id="lak"
+              name="color"
+              value="lak"
+            />
+            <label for="lak"
+              >Pálený lak(s příplatkem 5% ze základní ceny vozu)</label
+            ><br />
+            <input
+              class="input"
+              type="radio"
+              id="metal"
+              name="color"
+              value="metal"
+            />
+            <label for="metal">Metalické barvy (s priplatkem 7%)</label>
+          </fieldset>
+          <br />
+          <!--DODATECNA VYBAVA-->
+          <fieldset>
+            <legend>Doplňky</legend>
+            <input
+              class="input"
+              type="checkbox"
+              id="Cam"
+              name="vybava"
+              value="Cam"
+            />
+            <label for="Cam"> Parkovaci kamery (+10 000 Kč)</label><br />
+            <input
+              class="input"
+              type="checkbox"
+              id="wheels"
+              name="vybava"
+              value="wheels"
+            />
+            <label for="wheels"> Lita kola (+20 000 Kč)</label><br />
+            <input
+              class="input"
+              type="checkbox"
+              id="leather"
+              name="vybava"
+              value="leather"
+            />
+            <label for="leather"> Kozene sedacky (+50 000 Kč) </label><br />
+            <input
+              class="input"
+              type="checkbox"
+              id="tuning"
+              name="vybava"
+              value="tuning"
+            />
+            <label for="tuning"> Tuningova uprava (+20% ze zakladní ceny)</label
+            ><br />
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Cena</legend>
+            <button type="button" class="vyp" onclick="calculate()">
+              Výpočet
+            </button>
+            <p id="outputVyslCena">Celková cena</p>
+            <p>Rozpočet</p>
+            <label for="expected">Maximální cena</label><br /><input
+              class="input"
+              type="text"
+              id="expected"
+              name="expected"
+            /><br />
+            <p id="priceInfo"></p>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Email</legend>
+            <label for="email"> Zadejte email</label>
+            <input type="email" id="email" name="email" placeholder="@email" />
+            <p id="error"></p>
+            <br />
+            <button type="submit" id="submit" form="#order">Odeslat</button>
+          </fieldset>
+          <br />
+        </form>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
